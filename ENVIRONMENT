@@ -93,7 +93,7 @@ PINOKIO_SHARE_LOCAL=false
 #
 ##########################################################################
 PINOKIO_SHARE_LOCAL_PORT=
-OPENAI_API_KEY=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
+OPENAI_API_KEY=
 OPENAI_BASE_URL=http://localhost:1234/v1
 OPENAI_MODEL=qwen/qwen3-coder-30b
 PINOKIO_NETWORK_ACTIVE=1
