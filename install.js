@@ -18,6 +18,7 @@ module.exports = {
         venv: "env",
         path: "app",
         message: [
+          "uv pip install wheel",
           "uv pip install ../wheels/mmcv-2.1.0-cp310-cp310-win_amd64.whl",
           "uv pip install mmpose mmdet --no-build-isolation",
           "uv pip install -r ../requirements.txt"
@@ -31,6 +32,7 @@ module.exports = {
         venv: "env",
         path: "app",
         message: [
+          "uv pip install wheel",
           "uv pip install mmcv==2.1.0 mmpose mmdet --no-build-isolation",
           "uv pip install -r ../requirements.txt"
         ]
