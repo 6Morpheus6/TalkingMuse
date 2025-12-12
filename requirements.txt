@@ -13,6 +13,7 @@ einops==0.8.1
 gradio==5.24.0
 
 gdown
+spaces
 requests
 imageio[ffmpeg]
 
