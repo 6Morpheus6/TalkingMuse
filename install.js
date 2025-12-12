@@ -12,13 +12,26 @@ module.exports = {
       }
     },
     {
+      when: "{{platform === 'win32'}}",
       method: "shell.run",
       params: {
         venv: "env",
         path: "app",
         message: [
-          // pin a compatible mmcv version (mmdet requires mmcv < 2.2.0)
-          'uv pip install "mmcv>=2.0.0rc4,<2.2.0"',
+          "uv pip install ../wheels/mmcv-2.1.0-cp310-cp310-win_amd64.whl",
+          "uv pip install mmpose mmdet --no-build-isolation",
+          "uv pip install -r ../requirements.txt"
+        ]
+      }
+    },
+    {
+      when: "{{platform === 'linux'}}",
+      method: "shell.run",
+      params: {
+        venv: "env",
+        path: "app",
+        message: [
+          "uv pip install mmcv==2.1.0 mmpose mmdet --no-build-isolation",
           "uv pip install -r ../requirements.txt"
         ]
       }
